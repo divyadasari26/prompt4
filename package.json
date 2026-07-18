@@ -1,0 +1,47 @@
+{
+  "name": "arenaiq",
+  "version": "1.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm run build -w @arenaiq/client && npm run build -w @arenaiq/server",
+    "start": "npm run start -w @arenaiq/server",
+    "postinstall": "npm run build",
+    "clean": "node scripts/clean.mjs",
+    "lint": "eslint .",
+    "type-check": "npm run typecheck -w @arenaiq/client && npm run typecheck -w @arenaiq/server",
+    "test": "npm run test -w @arenaiq/client && npm run test -w @arenaiq/server",
+    "test:coverage": "npm run test:coverage -w @arenaiq/client && npm run test:coverage -w @arenaiq/server",
+    "test:mutation": "npm run test:mutation -w @arenaiq/server",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,cjs,mjs,ts,tsx}": [
+      "eslint --max-warnings=0"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --check"
+    ]
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@eslint/js": "^9.30.0",
+    "@playwright/test": "^1.61.1",
+    "eslint": "^9.30.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.6.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
+  }
+}
