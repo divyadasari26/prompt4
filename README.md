@@ -1,6 +1,6 @@
 # ArenaIQ — GenAI Stadium Operations (FIFA 2026)
 
-[Live demo](https://cloudcostaii.onrender.com) · [Repository](https://github.com/paladuguganeshnaidu/promptwars4)
+
 
 Compact, practical README aligned with the repository code (monorepo: `client` + `server`). Focus: developer setup, common workflows, and where to look in the code.
 
@@ -13,10 +13,7 @@ Compact, practical README aligned with the repository code (monorepo: `client` +
   - `server/` — Express API (TypeScript, Firestore, Gemini SDK)
   - `scripts/`, `e2e/`, `docs/`
 
-## Live / Source
 
-- Live demo: https://cloudcostaii.onrender.com
-- Source: https://github.com/paladuguganeshnaidu/promptwars4
 
 ## Prerequisites
 
