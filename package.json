@@ -9,7 +9,7 @@
     "client"
   ],
   "engines": {
-    "node": ">=18"
+    "node": "24.x"
   },
   "scripts": {
     "build": "npm run build -w @arenaiq/client && npm run build -w @arenaiq/server",
