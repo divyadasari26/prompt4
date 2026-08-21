@@ -10,7 +10,7 @@
     "url": "https://github.com/my-org/arenaiq.git"
   },
   "engines": {
-    "node": ">=22"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "node --env-file-if-exists=../.env --import=tsx --watch src/index.ts",
