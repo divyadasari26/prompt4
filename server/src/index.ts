@@ -1,6 +1,6 @@
 // Process entrypoint: start the HTTP server, seed baseline operations data,
 // and run the crowd-telemetry simulator loop.
-import { buildApp } from './app.js';
+import app from './app.js';
 import { TELEMETRY_TICK_MS } from './config/constants.js';
 import { env } from './env.js';
 import { advanceTelemetry, ensureSeeded } from './features/operations/service.js';
@@ -18,7 +18,6 @@ function startTelemetrySimulator(): void {
   }, TELEMETRY_TICK_MS);
 }
 
-const app = buildApp();
 app.listen(env.PORT, () => {
   logger.info({ port: env.PORT, nodeEnv: env.NODE_ENV }, 'ArenaIQ server listening');
 });

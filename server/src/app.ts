@@ -112,3 +112,4 @@ export function buildApp(): express.Express {
   app.use(errorHandler);
   return app;
 }
+export default buildApp();
